@@ -85,4 +85,15 @@ public class JunitUserRegistrationTest {
         boolean actualResult = junitUserRegistration.passwordRule3("jnsdjcvcp");
         Assert.assertEquals(false, actualResult);
     }
+    @Test
+    public void givenPasswordRule4_IsProper_ReturnTrue() {
+        boolean actualResult = junitUserRegistration.passwordRule4("qw98hRL@&dl");
+        Assert.assertEquals(true, actualResult);
+    }
+
+    @Test
+    public void givenPasswordRule4_IsNotProper_ReturnFalse() {
+        boolean actualResult = junitUserRegistration.passwordRule4("jsdjcvcp");
+        Assert.assertEquals(false, actualResult);
+    }
 }
