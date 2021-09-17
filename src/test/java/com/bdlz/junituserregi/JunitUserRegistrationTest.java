@@ -30,4 +30,15 @@ public class JunitUserRegistrationTest {
         boolean actualResult = junitUserRegistration.lastName("veliseTTi");
         Assert.assertEquals(false, actualResult);
     }
+    @Test
+    public void givenEmailId_IsProper_ReturnTrue() {
+        boolean actualResult = junitUserRegistration.emailId("ramakrishna96.velisetti@gmail.com");
+        Assert.assertEquals(true, actualResult);
+    }
+
+    @Test
+    public void givenEmailId_IsNotProper_ReturnFalse() {
+        boolean actualResult = junitUserRegistration.emailId("ramakrishna96.velisettigmail.com");
+        Assert.assertEquals(false, actualResult);
+    }
 }
